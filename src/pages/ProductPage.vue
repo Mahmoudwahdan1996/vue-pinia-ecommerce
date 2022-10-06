@@ -13,7 +13,6 @@ import { defineComponent, ref, computed } from "vue";
 import ProductImagesSlider from "../components/product/productImagesSlider.vue";
 import ProductDetails from "../components/product/productDetails.vue";
 
-
 import { Product } from "../types/index";
 
 export default defineComponent({
@@ -30,10 +29,6 @@ export default defineComponent({
       return selectedProduct.value?.images;
     });
 
-    const product = computed(()=>{
-      return 
-    })
-
     async function findProduct() {
       try {
         const response = await fetch(
@@ -48,7 +43,6 @@ export default defineComponent({
     }
 
     findProduct();
-
 
     return {
       images,
