@@ -23,7 +23,18 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const selectedProduct = ref<Product>();
+    const selectedProduct = ref<Product>({
+      id: 0,
+      title: "",
+      price: 0,
+      description: "",
+      category: {
+        id: 0,
+        name: "",
+        image: "",
+      },
+      images: [""],
+    });
 
     const images = computed(() => {
       return selectedProduct.value?.images;
